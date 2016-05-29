@@ -1,4 +1,5 @@
-<%--
+<%@ page import="org.apache.jena.query.*"
+  import="java.lang.String"%><%--
   Created by IntelliJ IDEA.
   User: Florian
   Date: 19/05/16
@@ -11,6 +12,22 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <%
+
+      String serviceURI =  "http://localhost:3030/ds/query";
+      Query query = QueryFactory.create(
+              "SELECT ?subject ?predicate ?object " +
+                      "WHERE { " +
+                      "  ?subject ?predicate ?object " +
+                      "} ");
+      QueryExecution q = QueryExecutionFactory.sparqlService(serviceURI,query);
+      ResultSet results = q.execSelect(); // get result-set
+      //ResultSetFormatter.out(System.out, results); // print results
+
+      out.print(ResultSetFormatter.asText(results));
+
+
+  %>
+
   </body>
 </html>

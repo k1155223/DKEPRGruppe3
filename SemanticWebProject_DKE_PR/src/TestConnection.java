@@ -18,7 +18,9 @@ public class TestConnection {
                         "} ");
         QueryExecution q = QueryExecutionFactory.sparqlService(serviceURI,query);
         ResultSet results = q.execSelect(); // get result-set
+
         ResultSetFormatter.out(System.out, results); // print results
-        System.out.println("babsi_test");
+
+        System.out.println(ResultSetFormatter.asText(results));
     }
 }
