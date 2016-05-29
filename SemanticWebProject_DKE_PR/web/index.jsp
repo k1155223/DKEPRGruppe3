@@ -24,7 +24,7 @@
       ResultSet results = q.execSelect(); // get result-set
       //ResultSetFormatter.out(System.out, results); // print results
 
-      out.print(ResultSetFormatter.asText(results));
+      out.print(ResultSetFormatter.asXMLString(results));
 
 
   %>
