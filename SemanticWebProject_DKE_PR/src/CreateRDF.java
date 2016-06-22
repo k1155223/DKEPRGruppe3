@@ -1,0 +1,109 @@
+/**
+ * Created by Florian on 22/06/16.
+ */
+import converter.Converter;
+import org.apache.jena.query.Dataset;
+import org.apache.jena.query.DatasetAccessor;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.log4j.varia.NullAppender;
+import org.apache.jena.ontology.OntModel;
+import org.apache.log4j.BasicConfigurator;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import org.apache.jena.query.*;
+
+public class CreateRDF {
+    private static String serviceURI =  "http://localhost:3030/ds/query";
+
+    static Converter c = new Converter(new File("src/converter/zuzug_2014.csv"), new File("src/converter/wegzug_2014.csv"), new File("src/converter/koordinaten.csv"));
+
+    public static void create() throws Exception{
+
+        Map<String, String[]> data = c.convert();
+
+        //Test des Joins
+//    	for(Entry<String, String[]> e : data.entrySet()){
+//    		System.out.print(e.getKey()+": ");
+//    		for(String v : e.getValue()){
+//    			System.out.print(v+", ");
+//    		}
+//    		System.out.println();
+//    	}
+
+
+
+        //in RDF schreiben
+        final String BASE = "http://www.dke.at/";
+        BasicConfigurator.configure(new NullAppender());
+        OntModel m = ModelFactory.createOntologyModel();
+        // createNamespace(m, BASE);
+        createDataModel(data, m, BASE);
+        writeFile(m);
+
+        //Einf¸gen in Triplestore
+        String serviceURI2 = "http://localhost:3030/ds/data";
+        DatasetAccessorFactory factory = null;
+        DatasetAccessor accessor = factory.createHTTP(serviceURI2);
+        accessor.putModel(m);
+        System.out.println("hochgeladen");
+
+
+        //Query
+        Query query = QueryFactory.create("PREFIX rdf: <http://www.dke.at/bezirk/> SELECT ?Bezirk ?Zuzuege_M ?Zuzuege_W ?Zuzuege_I ?Zuzuege_A WHERE {   ?x rdf:hatName ?Bezirk.  ?x rdf:zuzuege_M ?Zuzuege_M.  ?x rdf:zuzuege_W ?Zuzuege_W.  ?x rdf:zuzuege_I ?Zuzuege_I.  ?x rdf:zuzuege_A ?Zuzuege_A.}");
+        QueryExecution q = QueryExecutionFactory.sparqlService(serviceURI,query);
+        ResultSet results = q.execSelect(); // get result-set
+
+        ResultSetFormatter.out(System.out, results); // print results
+
+        System.out.println(ResultSetFormatter.asXMLString(results));
+    }
+
+    private static void writeFile(OntModel m) throws IOException {
+        String fileName = "data.rdf.xml";
+        FileWriter out = new FileWriter( fileName );
+        try {
+            System.out.println("trying to write the file");
+            m.write(out, "RDF/XML");
+            System.out.println("writing successful (hopefully)");
+        } finally {
+            try {
+                out.close();
+            }
+            catch (IOException closeException) {
+                // ignore
+            }
+        }
+    }
+
+    private static void createDataModel(Map<String, String[]> data, OntModel m,String BASE){
+        for(Entry<String, String[]> e : data.entrySet()){
+            //Region: ZZ Mƒnner, ZZ Frauen, ZZ Inl‰nder, ZZ Ausl‰nder, WZ M‰nner, WZ Frauen, WZ IL, WZ AL, Lat, Long
+            Resource r = m.createResource("http://www.dke.at/bezirk/"+e.getKey());
+            r.addProperty(m.getProperty(BASE+"bezirk/hatName"), e.getKey());
+            r.addProperty(m.getProperty(BASE+"bezirk/zuzuege_M"), e.getValue()[1]);
+            r.addProperty(m.getProperty(BASE+"bezirk/zuzuege_W"), e.getValue()[2]);
+            r.addProperty(m.getProperty(BASE+"bezirk/zuzuege_I"), e.getValue()[3]);
+            try{
+                System.out.println(m.getProperty(BASE+"bezirk/zuzuege_A") + e.getValue()[4]);
+                r.addProperty(m.getProperty(BASE+"bezirk/zuzuege_A"), e.getValue()[4]);
+            } catch (Exception exc){
+                throw exc;
+            }
+
+
+            Resource r2 = m.createResource("http://www.dke.at/"+e.getKey()+"/location/");
+            r2.addProperty(m.getProperty("http://www.dke.at/location/hatBreitengrad"), e.getValue()[5]);
+            r2.addProperty(m.getProperty("http://www.dke.at/location/hatLaengengrad"), e.getValue()[6]);
+
+            r.addProperty(m.getProperty("http://www.dke.at/bezirk/hatLocation"), m.getResource("http://www.dke.at/"+e.getKey()+"/location/"));
+
+        }
+    }
+}
