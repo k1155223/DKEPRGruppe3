@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 //Endformat:
-//Region: ZZ Mƒnner, ZZ Frauen, ZZ Inl‰nder, ZZ Ausl‰nder, WZ M‰nner, WZ Frauen, WZ IL, WZ AL, Lat, Long
+//Region: ZZ M�nner, ZZ Frauen, ZZ Inl�nder, ZZ Ausl�nder, WZ M�nner, WZ Frauen, WZ IL, WZ AL, Lat, Long
 
 public class Converter {
 	File zuzug;
@@ -52,10 +52,10 @@ public class Converter {
 		br3.readLine();
 
 		Map<String, String[]> data = new HashMap<String, String[]>();
-		//wegz¸ge
+		//wegz�ge
 		putValues(br3, data);
 
-		//zuzug¸e
+		//zuzug�e
 		putValues(br2, data);
 
 		//koords
@@ -76,8 +76,8 @@ public class Converter {
 		while((s = br.readLine()) != null){
 			List<String> value = readAndSplit(s);
 			String key = value.get(0);
-			key = key.replace("Zuz¸ge ", "");
-			key = key.replace("Wegz¸ge ", "");
+			key = key.replace("Zuz�ge ", "");
+			key = key.replace("Wegz�ge ", "");
 			value.remove(0);
 			if(data.get(key) != null){
 				for(String t : data.get(key)){
