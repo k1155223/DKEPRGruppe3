@@ -31,7 +31,7 @@
 
 
 <%
-    String serviceURI =  "http://localhost:3030/bitchez/query";
+    String serviceURI =  "http://localhost:3030/ds/query";
     Query query = QueryFactory.create(
             "PREFIX rdf: <http://www.dke.at/bezirk#>" +
             "SELECT ?Bezirk ?Zuzuege_M ?Zuzuege_W ?Zuzuege_I ?Zuzuege_A " +
