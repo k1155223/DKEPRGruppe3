@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<title>DKE PR Test2016</title>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+  <script type='text/javascript'>
+   
+    
+function goToNewPage()
+    {
+        var url = document.getElementById('list').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+  </script>
+</head>
+
+<body>
+<center>
+	<font face="verdana">
+	<h2>Let's move!</h2>
+	<img src="Zz.png" alt="Let's move" style="width:364px;height:240px;"> 
+	<form action="servlet" method="post">
+	<select id = "list" accesskey="target">
+               <option value = "zzm.html" >Zuzüge Männer</option>
+               <option value = "wzm.html" >Wegzüge Männer</option>
+               <option value = "zzf.html" >Zuzüge Frauen</option>
+               <option value = "wzf.html" >Wegzüge Frauen</option>
+             </select>
+             <input type=button value="Go" onclick="goToNewPage()" />
+	</form>
+	</font>
+	 
+</center>
+
+   
+</body>
+
+</html>
