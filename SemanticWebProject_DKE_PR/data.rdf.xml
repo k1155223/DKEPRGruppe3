@@ -1,0 +1,385 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.0="http://www.dke.at/bezirk/"
+    xmlns:j.1="http://www.dke.at/location/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Vorarlberg">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Vorarlberg/location/">
+        <j.1:hatLaengengrad>41</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>31</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>44</j.0:zuzuege_A>
+    <j.0:zuzuege_I>21</j.0:zuzuege_I>
+    <j.0:zuzuege_W>29</j.0:zuzuege_W>
+    <j.0:zuzuege_M>18</j.0:zuzuege_M>
+    <j.0:hatName>Vorarlberg</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Nieder�sterreich">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Nieder�sterreich/location/">
+        <j.1:hatLaengengrad>346</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>246</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>220</j.0:zuzuege_A>
+    <j.0:zuzuege_I>181</j.0:zuzuege_I>
+    <j.0:zuzuege_W>464</j.0:zuzuege_W>
+    <j.0:zuzuege_M>346</j.0:zuzuege_M>
+    <j.0:hatName>Nieder�sterreich</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Rohrbach">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Rohrbach/location/">
+        <j.1:hatLaengengrad>213</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>134</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>104</j.0:zuzuege_A>
+    <j.0:zuzuege_I>63</j.0:zuzuege_I>
+    <j.0:zuzuege_W>352</j.0:zuzuege_W>
+    <j.0:zuzuege_M>224</j.0:zuzuege_M>
+    <j.0:hatName>Rohrbach</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Steyr-Land">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Steyr-Land/location/">
+        <j.1:hatLaengengrad>120</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>69</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>75</j.0:zuzuege_A>
+    <j.0:zuzuege_I>21</j.0:zuzuege_I>
+    <j.0:zuzuege_W>105</j.0:zuzuege_W>
+    <j.0:zuzuege_M>59</j.0:zuzuege_M>
+    <j.0:hatName>Steyr-Land</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Gmunden">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Gmunden/location/">
+        <j.1:hatLaengengrad>131</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>82</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>77</j.0:zuzuege_A>
+    <j.0:zuzuege_I>27</j.0:zuzuege_I>
+    <j.0:zuzuege_W>191</j.0:zuzuege_W>
+    <j.0:zuzuege_M>113</j.0:zuzuege_M>
+    <j.0:hatName>Gmunden</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Ausland">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Ausland/location/">
+        <j.1:hatLaengengrad>575</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>850</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>1509</j.0:zuzuege_A>
+    <j.0:zuzuege_I>4617</j.0:zuzuege_I>
+    <j.0:zuzuege_W>441</j.0:zuzuege_W>
+    <j.0:zuzuege_M>2243</j.0:zuzuege_M>
+    <j.0:hatName>Ausland</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Burgenland">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Burgenland/location/">
+        <j.1:hatLaengengrad>21</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>15</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>11</j.0:zuzuege_A>
+    <j.0:zuzuege_I>7</j.0:zuzuege_I>
+    <j.0:zuzuege_W>25</j.0:zuzuege_W>
+    <j.0:zuzuege_M>17</j.0:zuzuege_M>
+    <j.0:hatName>Burgenland</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Ried im Innkreis">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Ried im Innkreis/location/">
+        <j.1:hatLaengengrad>58</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>39</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>38</j.0:zuzuege_A>
+    <j.0:zuzuege_I>19</j.0:zuzuege_I>
+    <j.0:zuzuege_W>111</j.0:zuzuege_W>
+    <j.0:zuzuege_M>69</j.0:zuzuege_M>
+    <j.0:hatName>Ried im Innkreis</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Linz-Land">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Linz-Land/location/">
+        <j.1:hatLaengengrad>1984</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>1309</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>1461</j.0:zuzuege_A>
+    <j.0:zuzuege_I>830</j.0:zuzuege_I>
+    <j.0:zuzuege_W>1601</j.0:zuzuege_W>
+    <j.0:zuzuege_M>1177</j.0:zuzuege_M>
+    <j.0:hatName>Linz-Land</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Grieskirchen">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Grieskirchen/location/">
+        <j.1:hatLaengengrad>119</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>74</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>68</j.0:zuzuege_A>
+    <j.0:zuzuege_I>30</j.0:zuzuege_I>
+    <j.0:zuzuege_W>138</j.0:zuzuege_W>
+    <j.0:zuzuege_M>83</j.0:zuzuege_M>
+    <j.0:hatName>Grieskirchen</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Steyr (Stadt)">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Steyr (Stadt)/location/">
+        <j.1:hatLaengengrad>84</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>51</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>51</j.0:zuzuege_A>
+    <j.0:zuzuege_I>57</j.0:zuzuege_I>
+    <j.0:zuzuege_W>114</j.0:zuzuege_W>
+    <j.0:zuzuege_M>92</j.0:zuzuege_M>
+    <j.0:hatName>Steyr (Stadt)</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Perg">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Perg/location/">
+        <j.1:hatLaengengrad>310</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>170</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>200</j.0:zuzuege_A>
+    <j.0:zuzuege_I>148</j.0:zuzuege_I>
+    <j.0:zuzuege_W>352</j.0:zuzuege_W>
+    <j.0:zuzuege_M>245</j.0:zuzuege_M>
+    <j.0:hatName>Perg</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/V�cklabruck">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/V�cklabruck/location/">
+        <j.1:hatLaengengrad>138</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>83</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>94</j.0:zuzuege_A>
+    <j.0:zuzuege_I>185</j.0:zuzuege_I>
+    <j.0:zuzuege_W>212</j.0:zuzuege_W>
+    <j.0:zuzuege_M>181</j.0:zuzuege_M>
+    <j.0:hatName>V�cklabruck</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Freistadt">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Freistadt/location/">
+        <j.1:hatLaengengrad>282</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>153</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>159</j.0:zuzuege_A>
+    <j.0:zuzuege_I>73</j.0:zuzuege_I>
+    <j.0:zuzuege_W>372</j.0:zuzuege_W>
+    <j.0:zuzuege_M>203</j.0:zuzuege_M>
+    <j.0:hatName>Freistadt</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Sch�rding">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Sch�rding/location/">
+        <j.1:hatLaengengrad>67</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>41</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>46</j.0:zuzuege_A>
+    <j.0:zuzuege_I>18</j.0:zuzuege_I>
+    <j.0:zuzuege_W>121</j.0:zuzuege_W>
+    <j.0:zuzuege_M>67</j.0:zuzuege_M>
+    <j.0:hatName>Sch�rding</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Summe Ober�sterreich">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Summe Ober�sterreich/location/">
+        <j.1:hatLaengengrad>4996</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>3146</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>3266</j.0:zuzuege_A>
+    <j.0:zuzuege_I>1878</j.0:zuzuege_I>
+    <j.0:zuzuege_W>5137</j.0:zuzuege_W>
+    <j.0:zuzuege_M>3473</j.0:zuzuege_M>
+    <j.0:hatName>Summe Ober�sterreich</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Tirol">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Tirol/location/">
+        <j.1:hatLaengengrad>72</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>61</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>64</j.0:zuzuege_A>
+    <j.0:zuzuege_I>69</j.0:zuzuege_I>
+    <j.0:zuzuege_W>108</j.0:zuzuege_W>
+    <j.0:zuzuege_M>80</j.0:zuzuege_M>
+    <j.0:hatName>Tirol</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/gesamt">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/gesamt/location/">
+        <j.1:hatLaengengrad>7003</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>5077</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>5945</j.0:zuzuege_A>
+    <j.0:zuzuege_I>7300</j.0:zuzuege_I>
+    <j.0:zuzuege_W>7101</j.0:zuzuege_W>
+    <j.0:zuzuege_M>6830</j.0:zuzuege_M>
+    <j.0:hatName>gesamt</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Wels (Stadt)">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Wels (Stadt)/location/">
+        <j.1:hatLaengengrad>124</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>96</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>117</j.0:zuzuege_A>
+    <j.0:zuzuege_I>129</j.0:zuzuege_I>
+    <j.0:zuzuege_W>187</j.0:zuzuege_W>
+    <j.0:zuzuege_M>149</j.0:zuzuege_M>
+    <j.0:hatName>Wels (Stadt)</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Kirchdorf an der Krems">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Kirchdorf an der Krems/location/">
+        <j.1:hatLaengengrad>94</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>64</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>45</j.0:zuzuege_A>
+    <j.0:zuzuege_I>18</j.0:zuzuege_I>
+    <j.0:zuzuege_W>125</j.0:zuzuege_W>
+    <j.0:zuzuege_M>80</j.0:zuzuege_M>
+    <j.0:hatName>Kirchdorf an der Krems</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Wien">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Wien/location/">
+        <j.1:hatLaengengrad>616</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>475</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>560</j.0:zuzuege_A>
+    <j.0:zuzuege_I>260</j.0:zuzuege_I>
+    <j.0:zuzuege_W>430</j.0:zuzuege_W>
+    <j.0:zuzuege_M>312</j.0:zuzuege_M>
+    <j.0:hatName>Wien</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Wels-Land">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Wels-Land/location/">
+        <j.1:hatLaengengrad>148</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>103</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>114</j.0:zuzuege_A>
+    <j.0:zuzuege_I>85</j.0:zuzuege_I>
+    <j.0:zuzuege_W>168</j.0:zuzuege_W>
+    <j.0:zuzuege_M>121</j.0:zuzuege_M>
+    <j.0:hatName>Wels-Land</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Salzburg">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Salzburg/location/">
+        <j.1:hatLaengengrad>119</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>105</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>80</j.0:zuzuege_A>
+    <j.0:zuzuege_I>124</j.0:zuzuege_I>
+    <j.0:zuzuege_W>176</j.0:zuzuege_W>
+    <j.0:zuzuege_M>142</j.0:zuzuege_M>
+    <j.0:hatName>Salzburg</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Eferding">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Eferding/location/">
+        <j.1:hatLaengengrad>138</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>74</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>75</j.0:zuzuege_A>
+    <j.0:zuzuege_I>35</j.0:zuzuege_I>
+    <j.0:zuzuege_W>127</j.0:zuzuege_W>
+    <j.0:zuzuege_M>74</j.0:zuzuege_M>
+    <j.0:hatName>Eferding</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/K�rnten">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/K�rnten/location/">
+        <j.1:hatLaengengrad>34</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>31</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>31</j.0:zuzuege_A>
+    <j.0:zuzuege_I>44</j.0:zuzuege_I>
+    <j.0:zuzuege_W>80</j.0:zuzuege_W>
+    <j.0:zuzuege_M>55</j.0:zuzuege_M>
+    <j.0:hatName>K�rnten</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Braunau am Inn">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Braunau am Inn/location/">
+        <j.1:hatLaengengrad>29</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>13</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>25</j.0:zuzuege_A>
+    <j.0:zuzuege_I>17</j.0:zuzuege_I>
+    <j.0:zuzuege_W>67</j.0:zuzuege_W>
+    <j.0:zuzuege_M>44</j.0:zuzuege_M>
+    <j.0:hatName>Braunau am Inn</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Summe Inland">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Summe Inland/location/">
+        <j.1:hatLaengengrad>6428</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>4227</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>4436</j.0:zuzuege_A>
+    <j.0:zuzuege_I>2683</j.0:zuzuege_I>
+    <j.0:zuzuege_W>6660</j.0:zuzuege_W>
+    <j.0:zuzuege_M>4587</j.0:zuzuege_M>
+    <j.0:hatName>Summe Inland</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Urfahr-Umgebung">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Urfahr-Umgebung/location/">
+        <j.1:hatLaengengrad>957</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>591</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>517</j.0:zuzuege_A>
+    <j.0:zuzuege_I>123</j.0:zuzuege_I>
+    <j.0:zuzuege_W>794</j.0:zuzuege_W>
+    <j.0:zuzuege_M>492</j.0:zuzuege_M>
+    <j.0:hatName>Urfahr-Umgebung</j.0:hatName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.dke.at/bezirk/Steiermark">
+    <j.0:hatLocation>
+      <rdf:Description rdf:about="http://www.dke.at/Steiermark/location/">
+        <j.1:hatLaengengrad>183</j.1:hatLaengengrad>
+        <j.1:hatBreitengrad>117</j.1:hatBreitengrad>
+      </rdf:Description>
+    </j.0:hatLocation>
+    <j.0:zuzuege_A>160</j.0:zuzuege_A>
+    <j.0:zuzuege_I>99</j.0:zuzuege_I>
+    <j.0:zuzuege_W>211</j.0:zuzuege_W>
+    <j.0:zuzuege_M>144</j.0:zuzuege_M>
+    <j.0:hatName>Steiermark</j.0:hatName>
+  </rdf:Description>
+</rdf:RDF>
