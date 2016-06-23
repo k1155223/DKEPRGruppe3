@@ -60,12 +60,10 @@ public class TestConnection {
             System.out.println(resultlist.get(i).get("Zuzuege_M"));
         }
 
-
-        /*
-        try {
+        /*try {
             CreateRDF.create();
         } catch (Exception e) {
             e.printStackTrace();
-        } */
+        }*/
     }
 }

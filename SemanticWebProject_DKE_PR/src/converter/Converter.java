@@ -2,6 +2,7 @@ package converter;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,21 +16,21 @@ import java.util.Map.Entry;
 //Region: ZZ M�nner, ZZ Frauen, ZZ Inl�nder, ZZ Ausl�nder, WZ M�nner, WZ Frauen, WZ IL, WZ AL, Lat, Long
 
 public class Converter {
-	File zuzug;
-	File wegzug;
+	File zuzug;  
+	File wegzug;  
 	File koords;
-
-
+	
+	
 	public Converter(File zuzug, File wegzug, File koords){
 		this.zuzug = zuzug;
 		this.wegzug = wegzug;
 		this.koords = koords;
 	}
-
+	
 	public static void main(String[] args) throws IOException {
 		Converter c = new Converter(new File("src/zuzug_2014.csv"), new File("src/wegzug_2014.csv"), new File("src/koordinaten.csv"));
-		//	Map<String, String[]> data = convert(c);
-
+	//	Map<String, String[]> data = convert(c);
+		
 //		for(Entry<String, String[]> e : data.entrySet()){
 //			System.out.print(e.getKey()+": ");
 //			for(String v : e.getValue()){
@@ -37,27 +38,27 @@ public class Converter {
 //			}
 //			System.out.println();
 //		}
-
+	
 	}
 
 	public Map<String, String[]> convert() throws FileNotFoundException, IOException {
-
+		
 		BufferedReader br = new BufferedReader(new FileReader(this.getZuzug()));
 		BufferedReader br2 = new BufferedReader(new FileReader(this.getWegzug()));
 		BufferedReader br3 = new BufferedReader(new FileReader(this.getKoords()));
-
+		
 		//skip headings
 		br.readLine();
 		br2.readLine();
 		br3.readLine();
-
+		
 		Map<String, String[]> data = new HashMap<String, String[]>();
 		//wegz�ge
 		putValues(br3, data);
-
+		
 		//zuzug�e
 		putValues(br2, data);
-
+		
 		//koords
 		putValues(br,data);
 		return data;
@@ -70,15 +71,23 @@ public class Converter {
 		}
 		return value;
 	}
-
+	
 	private static void putValues(BufferedReader br, Map<String, String[]> data) throws IOException{
 		String s;
 		while((s = br.readLine()) != null){
 			List<String> value = readAndSplit(s);
 			String key = value.get(0);
-			key = key.replace("Zuz�ge ", "");
-			key = key.replace("Wegz�ge ", "");
+			key = key.replace("Zuzüge ", "");
+			key = key.replace("Wegzüge ", "");
+			key = key.replace("ü", "ue");
+			key = key.replace("ä", "ae");
+			key = key.replace("ö", "oe");
+//			key = key.replace("\u00fc", "ue");
+//			key = key.replace("\u00e4", "ae");
+//			key = key.replace("\u00f6", "oe");
+
 			value.remove(0);
+
 			if(data.get(key) != null){
 				for(String t : data.get(key)){
 					value.add(t);
@@ -86,9 +95,9 @@ public class Converter {
 			}
 			data.put(key, value.toArray(new String[0]));
 		}
-
+		
 	}
-
+	
 
 	public File getKoords() {
 		return koords;
@@ -113,6 +122,6 @@ public class Converter {
 	public void setWegzug(File wegzug) {
 		this.wegzug = wegzug;
 	}
-
+	
 
 }
