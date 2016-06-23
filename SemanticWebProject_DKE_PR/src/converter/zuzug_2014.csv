@@ -1,4 +1,4 @@
-ï»¿Politischer Bezirk/Gebiet;ZuzÃ¼ge MÃ¤nner;ZuzÃ¼ge Frauen;ZuzÃ¼ge InlÃ¤nderInnen;ZuzÃ¼ge AuslÃ¤nderInnen
+Politischer Bezirk/Gebiet;Zuzüge Männer;Zuzüge Frauen;Zuzüge InländerInnen;Zuzüge AusländerInnen
 Steyr (Stadt);79;92;114;57
 Wels (Stadt);167;149;187;129
 Braunau am Inn;40;44;67;17
@@ -11,15 +11,15 @@ Linz-Land;1254;1177;1601;830
 Perg;255;245;352;148
 Ried im Innkreis;61;69;111;19
 Rohrbach;191;224;352;63
-SchÃ¤rding;72;67;121;18
+Schärding;72;67;121;18
 Steyr-Land;67;59;105;21
 Urfahr-Umgebung;425;492;794;123
-VÃ¶cklabruck;216;181;212;185
+Vöcklabruck;216;181;212;185
 Wels-Land;132;121;168;85
-Summe OberÃ¶sterreich;3542;3473;5137;1878
+Summe Oberösterreich;3542;3473;5137;1878
 Burgenland;15;17;25;7
-KÃ¤rnten;69;55;80;44
-NiederÃ¶sterreich;299;346;464;181
+Kärnten;69;55;80;44
+Niederösterreich;299;346;464;181
 Salzburg;158;142;176;124
 Steiermark;166;144;211;99
 Tirol;97;80;108;69
@@ -27,4 +27,4 @@ Vorarlberg;32;18;29;21
 Wien;378;312;430;260
 Summe Inland;4756;4587;6660;2683
 Ausland;2815;2243;441;4617
-ZuzÃ¼ge gesamt;7571;6830;7101;7300
+Zuzüge gesamt;7571;6830;7101;7300

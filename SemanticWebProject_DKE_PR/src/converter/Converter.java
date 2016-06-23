@@ -3,6 +3,7 @@ package converter;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -26,7 +27,11 @@ public class Converter {
 		this.wegzug = wegzug;
 		this.koords = koords;
 	}
-	
+
+	public void load(){
+
+	}
+
 	public static void main(String[] args) throws IOException {
 		Converter c = new Converter(new File("src/zuzug_2014.csv"), new File("src/wegzug_2014.csv"), new File("src/koordinaten.csv"));
 	//	Map<String, String[]> data = convert(c);
@@ -43,10 +48,17 @@ public class Converter {
 
 	public Map<String, String[]> convert() throws FileNotFoundException, IOException {
 		
-		BufferedReader br = new BufferedReader(new FileReader(this.getZuzug()));
+		/*BufferedReader br = new BufferedReader(new FileReader(this.getZuzug()));
 		BufferedReader br2 = new BufferedReader(new FileReader(this.getWegzug()));
-		BufferedReader br3 = new BufferedReader(new FileReader(this.getKoords()));
-		
+		BufferedReader br3 = new BufferedReader(new FileReader(this.getKoords()));*/
+
+		FileInputStream fis = new FileInputStream(this.getZuzug());
+		BufferedReader br = new BufferedReader(new InputStreamReader(fis, "Cp1252"));
+		FileInputStream fis2 = new FileInputStream(this.getZuzug());
+		BufferedReader br2 = new BufferedReader(new InputStreamReader(fis2, "Cp1252"));
+		FileInputStream fis3 = new FileInputStream(this.getZuzug());
+		BufferedReader br3 = new BufferedReader(new InputStreamReader(fis3, "Cp1252"));
+
 		//skip headings
 		br.readLine();
 		br2.readLine();

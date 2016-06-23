@@ -2,18 +2,16 @@
  * Created by Florian on 19/05/16.
  */
 
+import TripleStore.CreateRDF;
 import org.apache.jena.query.*;
 import java.lang.String;
-import java.util.LinkedList;
 import java.util.ArrayList;
-import Zuzuege_Wegzuzege.*;
-import org.apache.jena.rdf.model.RDFNode;
 
 public class TestConnection {
     private static String serviceURI =  "http://localhost:3030/ds/query";
     public static void main(String[] args){
 
-        System.out.println("test");
+        /*System.out.println("test");
 
         Query query = QueryFactory.create(
                 "SELECT ?subject ?predicate ?object " +
@@ -58,12 +56,15 @@ public class TestConnection {
         System.out.println("Using for loop");
         for (int i = 0; i < resultlist.size(); i++) {
             System.out.println(resultlist.get(i).get("Zuzuege_M"));
-        }
+        }*/
 
-        /*try {
+        try {
             CreateRDF.create();
+            CreateRDF c = new CreateRDF();
+            c.testPath();
+
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
     }
 }

@@ -1,4 +1,4 @@
-/**
+package TripleStore; /**
  * Created by Florian on 22/06/16.
  */
 import converter.Converter;
@@ -14,15 +14,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.jena.query.*;
 
+
 public class CreateRDF {
     private static String serviceURI =  "http://localhost:3030/ds/query";
 
-    static Converter c = new Converter(new File("src/converter/zuzug_2014.csv"), new File("src/converter/wegzug_2014.csv"), new File("src/converter/koordinaten.csv"));
+    static Converter c = new Converter(new File("DKE/zuzug_2014.csv"), new File("DKE/wegzug_2014.csv"), new File("DKE/koordinaten.csv"));
 
     public static void create() throws Exception{
         Map<String, String[]> data = c.convert();
@@ -35,8 +37,6 @@ public class CreateRDF {
 //    		}
 //    		System.out.println();
 //    	}
-
-
 
         //in RDF schreiben
         final String BASE = "http://www.dke.at/";
@@ -104,5 +104,14 @@ public class CreateRDF {
             }
 
         }
+    }
+
+    public String testPath(){
+
+        URL location = this.getClass().getProtectionDomain().getCodeSource().getLocation();
+        System.out.println(location.getFile());
+
+        File f = new File("");
+        return f.getAbsolutePath();
     }
 }

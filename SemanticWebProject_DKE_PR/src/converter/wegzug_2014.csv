@@ -1,4 +1,4 @@
-ï»¿Politischer Bezirk/Gebiet;WegzÃ¼ge MÃ¤nner;WegzÃ¼ge Frauen;WegzÃ¼ge InlÃ¤nderInnen;WegzÃ¼ge AuslÃ¤nderInnen
+Politischer Bezirk/Gebiet;Wegzüge Männer;Wegzüge Frauen;Wegzüge InländerInnen;Wegzüge AusländerInnen
 Steyr (Stadt);51;51;84;18
 Wels (Stadt);117;96;124;89
 Braunau am Inn;25;13;29;9
@@ -11,15 +11,15 @@ Linz-Land;1461;1309;1984;786
 Perg;200;170;310;60
 Ried im Innkreis;38;39;58;19
 Rohrbach;104;134;213;25
-SchÃ¤rding;46;41;67;20
+Schärding;46;41;67;20
 Steyr-Land;75;69;120;24
 Urfahr-Umgebung;517;591;957;151
-VÃ¶cklabruck;94;83;138;39
+Vöcklabruck;94;83;138;39
 Wels-Land;114;103;148;69
-Summe OberÃ¶sterreich;3266;3146;4996;1416
+Summe Oberösterreich;3266;3146;4996;1416
 Burgenland;11;15;21;5
-KÃ¤rnten;31;31;34;28
-NiederÃ¶sterreich;220;246;346;120
+Kärnten;31;31;34;28
+Niederösterreich;220;246;346;120
 Salzburg;80;105;119;66
 Steiermark;160;117;183;94
 Tirol;64;61;72;53
@@ -27,4 +27,4 @@ Vorarlberg;44;31;41;34
 Wien;560;475;616;419
 Summe Inland;4436;4227;6428;2235
 Ausland;1509;850;575;1784
-WegzÃ¼ge gesamt;5945;5077;7003;4019
+Wegzüge gesamt;5945;5077;7003;4019
