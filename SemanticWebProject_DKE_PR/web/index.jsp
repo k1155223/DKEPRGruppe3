@@ -1,7 +1,9 @@
 <%@ page import="org.apache.jena.query.*"
          import="java.lang.String"
          import="Zuzuege_Wegzuzege.*"
-%><%--
+         import="TripleStore.*"
+%>
+<%@ page import="TripleStore.CreateRDF" %><%--
   Created by IntelliJ IDEA.
   User: Florian
   Date: 19/05/16
@@ -24,11 +26,16 @@
 <%
     Testfile testcall = new Testfile();
     String teststring = testcall.getHello();
+    CreateRDF.create();
+    CreateRDF c = new CreateRDF();
+    String teststring1 = c.testPath();
 %>
+
+<H1> <%out.print(teststring1);%> </H1>
 
 <H1> <% out.print(teststring); %> </H1>
 <H2> <% out.print("Print test");  %>  </H2>
-
+<H2> <% out.print("Print asfdfasdfadsafd");  %>  </H2>
 
 <%
     String serviceURI =  "http://localhost:3030/ds/query";
