@@ -1,6 +1,7 @@
 <%@ page import="org.apache.jena.query.*"
          import="java.lang.String"
          import="Zuzuege_Wegzuzege.*"
+         import="CreateRDF.*"
 %><%--
   Created by IntelliJ IDEA.
   User: Florian
@@ -12,22 +13,30 @@
 <html>
 <head>
     <title>Our Semantic App</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+  <script type='text/javascript'>
+   
+    
+function goToNewPage()
+    {
+	<% CreateRDF.create();%>
+            window.location = "zzm.html";
+            
+        
+    }
+  </script>
 </head>
 <body>
 
-<H1> Dies ist ein Test </H1>
+	<font face="verdana">
+	<h2>Let's move!</h2>
+	<img src="Zz.png" alt="Let's move" style="width:364px;height:240px;"> 
+	<form action="servlet" method="post">
 
-<a href="zuzuege.jsp">Zuzuege-Liste</a>
-
-<a href="wegzuege.jsp">wegzuege-Liste</a>
-
-<%
-    Testfile testcall = new Testfile();
-    String teststring = testcall.getHello();
-%>
-
-<H1> <% out.print(teststring); %> </H1>
-<H2> <% out.print("Print test");  %>  </H2>
+      <input type=button value="Go" onclick="goToNewPage()" />
+	</form>
+	</font>
 
 
 <%
