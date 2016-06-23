@@ -1,20 +1,9 @@
 <%@ page import="org.apache.jena.query.*"
          import="java.lang.String"
          import="Zuzuege_Wegzuzege.*"
-<<<<<<< HEAD
          import="TripleStore.*"
 %>
-<%@ page import="TripleStore.CreateRDF" %><%--
-=======
-         import="CreateRDF.*"
-%><%--
->>>>>>> 809dc6aab3c7bd636f19c142c4e8212b8df2b34c
-  Created by IntelliJ IDEA.
-  User: Florian
-  Date: 19/05/16
-  Time: 16:32
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="TripleStore.CreateRDF" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -35,35 +24,13 @@ function goToNewPage()
 </head>
 <body>
 
-	<font face="verdana">
 	<h2>Let's move!</h2>
 	<img src="Zz.png" alt="Let's move" style="width:364px;height:240px;"> 
 	<form action="servlet" method="post">
+        <input type=button value="Go" onclick="goToNewPage()" />
 
-<<<<<<< HEAD
-<a href="zuzuege.jsp">Zuzuege-Liste</a>
-
-<a href="wegzuege.jsp">wegzuege-Liste</a>
-
-<%
-    Testfile testcall = new Testfile();
-    String teststring = testcall.getHello();
-    CreateRDF.create();
-    CreateRDF c = new CreateRDF();
-    String teststring1 = c.testPath();
-%>
-
-<H1> <%out.print(teststring1);%> </H1>
-
-<H1> <% out.print(teststring); %> </H1>
-<H2> <% out.print("Print test");  %>  </H2>
-<H2> <% out.print("Print asfdfasdfadsafd");  %>  </H2>
-=======
-      <input type=button value="Go" onclick="goToNewPage()" />
-	</form>
+    </form>
 	</font>
-
->>>>>>> 809dc6aab3c7bd636f19c142c4e8212b8df2b34c
 
 <%
     String serviceURI =  "http://localhost:3030/ds/query";
