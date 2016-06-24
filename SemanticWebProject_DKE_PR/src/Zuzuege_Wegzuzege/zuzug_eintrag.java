@@ -1,4 +1,6 @@
 package Zuzuege_Wegzuzege;
+import org.apache.jena.query.*;
+import java.util.ArrayList;
 
 /**
  * Created by Christian Kolb on 21.06.2016.
