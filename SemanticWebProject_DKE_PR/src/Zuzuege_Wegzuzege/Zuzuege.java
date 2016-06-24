@@ -20,7 +20,7 @@ public class Zuzuege {
             "PREFIX rdf: <http://www.dke.at/bezirk/>" +
                     "PREFIX rdf2: <http://www.dke.at/location/>" +
 
-                    "SELECT ?Bezirk ?Zuzuege_M ?Zuzuege_W ?Zuzuege_I ?Zuzuege_A ?LG ?BG" +
+                    "SELECT ?Bezirk ?Zuzuege_M ?Zuzuege_W ?Zuzuege_I ?Zuzuege_A ?LG ?BG " +
                     "WHERE {" +
                     "?x rdf:hatName ?Bezirk." +
                     "?x rdf:zuzuege_M ?Zuzuege_M." +
@@ -39,29 +39,27 @@ public class Zuzuege {
 
         for (int i = 0; i < rl.size(); i++) {
 
-            bezirk = rl.get(i).get("Zuzuege_M").toString();
+            bezirk = rl.get(i).get("Bezirk").toString();
             zuzug_maenner = Integer.parseInt(rl.get(i).get("Zuzuege_M").toString());
             zuzug_frauen = Integer.parseInt(rl.get(i).get("Zuzuege_W").toString());
             zuzug_inlaender = Integer.parseInt(rl.get(i).get("Zuzuege_I").toString());
             zuzug_auslaender = Integer.parseInt(rl.get(i).get("Zuzuege_A").toString());
 
-            breitengrad = 0; // da null pointer exception in der Abfrage
-            // breitengrad = Double.parseDouble(rl.get(i).get("BG").toString());
-            // == null pointer exception aber warum?
+            // breitengrad = 0; // da null pointer exception in der Abfrage
 
-            laengengrad =  Double.parseDouble(rl.get(i).get("LG").toString());
-
-            /*
-            if(rl.get(i).get("BG").toString() == null) {
+            if(rl.get(i).get("BG") != null && rl.get(i).get("LG") != null){
                 breitengrad = Double.parseDouble(rl.get(i).get("BG").toString());
+                laengengrad = Double.parseDouble(rl.get(i).get("LG").toString());
+
+                zuzuege.add(new zuzug_eintrag( bezirk, zuzug_maenner, zuzug_frauen, zuzug_inlaender, zuzug_auslaender, breitengrad, laengengrad ));
+
             }else
             {
-                breitengrad = 0;
-            } */
+               // Keine Aktion ausführen denn EInträge ohne Koordinaten stellen nur Gesamtsummen dar und keine Bezirke bzw.Bundeslaender
+            }
 
-            zuzuege.add(new zuzug_eintrag( bezirk, zuzug_maenner, zuzug_frauen, zuzug_inlaender, zuzug_auslaender, breitengrad, laengengrad ));
 
-        }
+        } // end for loop
 
     } // end constructor Zuzuege
 
