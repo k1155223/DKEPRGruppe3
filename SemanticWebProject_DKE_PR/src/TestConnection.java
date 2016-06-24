@@ -17,7 +17,7 @@ public class TestConnection {
 
         for(int i = 0; i < zz.size(); i++ ){
 
-            System.out.println(zz.get(i).getBezirk() + " Zuzug Auslaender: " + zz.get(i).getZuzug_auslaender() + " Laengengrad " + zz.get(i).getLaengengrad() + " Breitengrad " + zz.get(i).getBreitengrad());
+            System.out.println(zz.get(i).getBezirk() + " Zuzug Auslaender: " + zz.get(i).getZuzug_auslaender() + " Breitengrad " + zz.get(i).getBreitengrad() + " Laengengrad " + zz.get(i).getLaengengrad());
 
         }
 

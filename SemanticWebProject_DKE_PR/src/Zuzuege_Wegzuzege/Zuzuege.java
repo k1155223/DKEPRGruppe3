@@ -28,8 +28,8 @@ public class Zuzuege {
                     "?x rdf:zuzuege_I ?Zuzuege_I." +
                     "?x rdf:zuzuege_A ?Zuzuege_A." +
                     "?x rdf:hatLocation ?y." +
-                    "?y rdf2:hatLaengengrad ?LG." +
-                    "?y rdf2:hatBreitengrad ?BG. }");
+                    "?y rdf2:hatLaengengrad ?BG." +
+                    "?y rdf2:hatBreitengrad ?LG. }");
 
 
     public Zuzuege() {
@@ -43,11 +43,23 @@ public class Zuzuege {
             zuzug_maenner = Integer.parseInt(rl.get(i).get("Zuzuege_M").toString());
             zuzug_frauen = Integer.parseInt(rl.get(i).get("Zuzuege_W").toString());
             zuzug_inlaender = Integer.parseInt(rl.get(i).get("Zuzuege_I").toString());
-            zuzug_auslaender = Integer.parseInt(rl.get(i).get("Zuzuege_I").toString());
-            laengengrad =  Double.parseDouble(rl.get(i).get("Laengengrad").toString());
-            breitengrad =  Double.parseDouble(rl.get(i).get("Breitengrad").toString());
+            zuzug_auslaender = Integer.parseInt(rl.get(i).get("Zuzuege_A").toString());
 
-            zuzuege.add(new zuzug_eintrag( bezirk, zuzug_maenner, zuzug_frauen, zuzug_inlaender, zuzug_auslaender, laengengrad, breitengrad ));
+            breitengrad = 0; // da null pointer exception in der Abfrage
+            // breitengrad = Double.parseDouble(rl.get(i).get("BG").toString());
+            // == null pointer exception aber warum?
+
+            laengengrad =  Double.parseDouble(rl.get(i).get("LG").toString());
+
+            /*
+            if(rl.get(i).get("BG").toString() == null) {
+                breitengrad = Double.parseDouble(rl.get(i).get("BG").toString());
+            }else
+            {
+                breitengrad = 0;
+            } */
+
+            zuzuege.add(new zuzug_eintrag( bezirk, zuzug_maenner, zuzug_frauen, zuzug_inlaender, zuzug_auslaender, breitengrad, laengengrad ));
 
         }
 
