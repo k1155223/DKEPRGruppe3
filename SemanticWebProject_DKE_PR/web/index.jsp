@@ -16,7 +16,7 @@
 function goToNewPage()
     {
 	<% CreateRDF.create();%>
-            window.location = "zzm.html";
+            window.location = "map.jsp";
             
         
     }
