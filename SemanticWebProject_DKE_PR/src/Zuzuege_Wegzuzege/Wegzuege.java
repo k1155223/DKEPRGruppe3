@@ -1,5 +1,5 @@
 package Zuzuege_Wegzuzege;
-import java.util.ArrayList;
+        import java.util.ArrayList;
 
 /**
  * Created by Walcherhof on 22.06.2016.
@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class Wegzuege {
 
     ArrayList<wegzug_eintrag> wegzuege = new ArrayList<>();
+
 
     public Wegzuege() {
         wegzuege.add(new wegzug_eintrag("Steyr", 51, 51, 84, 18, 7.887778, 14.550278));
