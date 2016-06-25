@@ -4,12 +4,12 @@ package Zuzuege_Wegzuzege;
 /**
  * Created by Walcherhof on 22.06.2016.
  */
-public class Wegzuege {
+class Wegzuege {
 
     ArrayList<wegzug_eintrag> wegzuege = new ArrayList<>();
 
 
-    public Wegzuege() {
+    Wegzuege() {
         wegzuege.add(new wegzug_eintrag("Steyr", 51, 51, 84, 18, 7.887778, 14.550278));
         wegzuege.add(new wegzug_eintrag("Voecklabruck", 94, 83, 138, 39, 48.008611, 13.655833));
     } // end constructor Zuzuege

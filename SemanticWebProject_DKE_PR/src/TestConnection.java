@@ -12,12 +12,12 @@ public class TestConnection {
     private static String serviceURI =  "http://localhost:3030/ds/query";
     public static void main(String[] args){
 
-        Zuzuege zuzuegeliste = new Zuzuege();
-        ArrayList<zuzug_eintrag> zz = zuzuegeliste.getZuzuege();
+        ZuzuegeWegzuege zuzuege_wegzuege_liste = new ZuzuegeWegzuege();
+        ArrayList<zuzug_wegzug_eintrag> zzwz = zuzuege_wegzuege_liste.getZuzuegeWegzuege();
 
-        for(int i = 0; i < zz.size(); i++ ){
+        for(int i = 0; i < zzwz.size(); i++ ){
 
-            System.out.println(zz.get(i).getBezirk() + " Zuzug Auslaender: " + zz.get(i).getZuzug_auslaender() + " Breitengrad " + zz.get(i).getBreitengrad() + " Laengengrad " + zz.get(i).getLaengengrad());
+            System.out.println(zzwz.get(i).getBezirk() + " Zuzug Auslaender: " + zzwz.get(i).getZuzug_auslaender() + " Breitengrad " + zzwz.get(i).getBreitengrad() + " Laengengrad " + zzwz.get(i).getLaengengrad());
 
         }
 
