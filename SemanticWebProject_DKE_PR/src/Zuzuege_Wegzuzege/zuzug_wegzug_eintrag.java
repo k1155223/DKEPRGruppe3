@@ -70,5 +70,16 @@ public class zuzug_wegzug_eintrag{
         return wegzug_maenner;
     }
 
+    public int getZuzuegeSumme(){
+        // Zuzug Männer + Zuzug Frauen = Zuüge gesamt da sie bereits Zuzüge Inländer und Zuzüge Ausländer beinhalten
+        return (getZuzug_maenner() + getZuzug_frauen());
+    }
+
+    public int getWegzuegeSumme(){
+        // Wegzug Männer + Wegzug Frauen = Wegzüge gesamt da sie bereits Wegzüge Inländer und Wegzüge Ausländer beinhalten
+        return (getWegzug_maenner() + getWegzug_frauen());
+    }
+
+
 } // end class zuzug_eintrag
 

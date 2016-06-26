@@ -23,16 +23,13 @@
 
 
     function drawMap() {
-      
-      
 
-            
       var dataB = google.visualization.DataTable();
         dataB.addColumn('string', 'City');
-        dataB.addColumn('number', 'Zuzüge Gesamt');
+        dataB.addColumn('number', 'Zuzï¿½ge Gesamt');
          <%
-            Zuzuege zuzuegeliste = new Zuzuege();
-            ArrayList<zuzug_eintrag> zz = zuzuegeliste.getZuzuege();
+            ZuzuegeWegzuege zuzuegeliste = new ZuzuegeWegzuege();
+            ArrayList<zuzug_wegzug_eintrag> zz = zuzuegeliste.getZuzuegeWegzuege();
             for(int i = 0; i < zz.size(); i++ ){
             %>
             var bezirk = "<%=zz.get(i).getBezirk()%>";
@@ -81,13 +78,13 @@
 	<form action="servlet" method="post">
 	<select id = "list" accesskey="target">
               <option value = "map.jsp" >Map</option>
-               <option value = "wzg.jsp" >Wegzüge Gesamt</option>
-               <option value = "zzg.jsp" >Zuzüge Gesamt</option>
+               <option value = "wzg.jsp" >Wegzï¿½ge Gesamt</option>
+               <option value = "zzg.jsp" >Zuzï¿½ge Gesamt</option>
                <option value = "list.jsp" >Liste</option>
                </select>
              <input type=button value="Go" onclick="goToNewPage()" />
 	</form>
-	<h4>Zuzüge Gesamt</h4>
+	<h4>Zuzï¿½ge Gesamt</h4>
 	</font>
 	
 	 

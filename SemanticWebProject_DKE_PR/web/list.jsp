@@ -22,18 +22,22 @@
         function drawTable() {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'City');
-            data.addColumn('number', 'Wegzüge Gesamt');
-            data.addColumn('number', 'Zuzüge Gesamt');
+            data.addColumn('number', 'Wegzï¿½ge Gesamt');
+            data.addColumn('number', 'Zuzï¿½ge Gesamt');
+
+            var bezirk;
+            var zuzuege_gesamt;
+            var breitengrad;
+            var laengengrad;
+
             <%
-            Wegzuege wegzuegeliste = new Wegzuege();
-            ArrayList<wegzug_eintrag> wz = wegzuegeliste.getWegzuege();
-             Zuzuege zuzuegeliste = new Zuzuege();
-            ArrayList<zuzug_eintrag> zz = zuzuegeliste.getZuzuege();
-            for(int i = 0; i < wz.size(); i++ ){
+                ZuzuegeWegzuege zuzuege_wegzuege = new ZuzuegeWegzuege();
+                ArrayList<zuzug_wegzug_eintrag> zzwz = zuzuege_wegzuege.getZuzuegeWegzuege();
+            for(int i = 0; i < zzwz.size(); i++ ){
             %>
-            var bezirk = "<%=wz.get(i).getBezirk()%>";
-            var wegzuege_gesamt = <%=wz.get(i).getWegzug_frauen()+wz.get(i).getWegzug_maenner()%>;
-            var zuzuege_gesamt = <%=zz.get(i).getZuzug_maenner()+zz.get(i).getZuzug_frauen()%>;
+            bezirk = "<%=zzwz.get(i).getBezirk()%>";
+            wegzuege_gesamt = <%=zzwz.get(i).getWegzug_frauen()+zzwz.get(i).getWegzug_maenner()%>;
+            zuzuege_gesamt = <%=zzwz.get(i).getZuzug_maenner()+zzwz.get(i).getZuzug_frauen()%>;
             data.addRows([ [bezirk,  {v: wegzuege_gesamt, f: String(wegzuege_gesamt)},{v: zuzuege_gesamt, f:  String(zuzuege_gesamt)}] ] );
             <%
               }
@@ -56,16 +60,13 @@
     <font face="verdana">
         <h2>Let's move!</h2>
         <img src="Zz.png" alt="Let's move" style="width:364px;height:240px;">
-
-        <form action="servlet" method="post">
-            <select id = "list" accesskey="target">
-                  <option value = "map.jsp" >Map</option>
-               <option value = "wzg.jsp" >Wegzüge Gesamt</option>
-               <option value = "zzg.jsp" >Zuzüge Gesamt</option>
-               <option value = "list.jsp" >Liste</option>
-            </select>
-            <input type=button value="Go" onclick="goToNewPage()" />
-        </form>
+        <ul>
+            <li><a href="map.jsp" >Map</a></li>
+            <li><a href="list.jsp" >Liste</a></li>
+            <li><a href="zuzuege_gesamt.jsp">ZuzÃ¼ge gesamt</a></li>
+            <li><a href="wegzuege_gesamt.jsp">WegzÃ¼ge gesamt</a></li>
+            <li><a href="relation_zuzuege_wegzuege.jsp">Relation WegzÃ¼ge zu ZuzÃ¼ge</a></li>
+        </ul>
     </font>
 
 

@@ -17,7 +17,13 @@
 <title>Our Semantic App</title>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
-  <script type='text/javascript'>
+
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdIsSVZAwwVk4q-9qdyISziJQKus03B1M&callback=initMap">
+  </script>
+
+    <script type='text/javascript'>
+
    google.charts.load('current', {'packages': ['geochart']});
    google.charts.setOnLoadCallback(drawMap);
 
@@ -29,10 +35,10 @@
             
       var dataB = google.visualization.DataTable();
         dataB.addColumn('string', 'City');
-        dataB.addColumn('number', 'Wegzüge Gesamt');
+        dataB.addColumn('number', 'Wegzï¿½ge Gesamt');
          <%
-            Wegzuege wegzuegeliste = new Wegzuege();
-            ArrayList<wegzug_eintrag> wz = wegzuegeliste.getWegzuege();
+            ZuzuegeWegzuege wegzuegeliste = new ZuzuegeWegzuege();
+            ArrayList<zuzug_wegzug_eintrag> wz = wegzuegeliste.getZuzuegeWegzuege();
             for(int i = 0; i < wz.size(); i++ ){
             %>
             var bezirk = "<%=wz.get(i).getBezirk()%>";
@@ -81,13 +87,14 @@
 	<form action="servlet" method="post">
 	<select id = "list" accesskey="target">
               <option value = "map.jsp" >Map</option>
-               <option value = "wzg.jsp" >Wegzüge Gesamt</option>
-               <option value = "zzg.jsp" >Zuzüge Gesamt</option>
+               <option value = "wzg.jsp" >Wegzï¿½ge Gesamt</option>
+               <option value = "zzg.jsp" >Zuzï¿½ge Gesamt</option>
                <option value = "list.jsp" >Liste</option>
+                <option value = "zuzuege.jsp">Zuzuege mit Marker</option>
                </select>
              <input type=button value="Go" onclick="goToNewPage()" />
 	</form>
-	<h4>Wegzüge Gesamt</h4>
+	<h4>Wegzï¿½ge Gesamt</h4>
 	</font>
 	
 	 

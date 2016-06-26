@@ -26,32 +26,32 @@
 var zz = new Array(1,2,3,4,5,6,7,8,9,10,11 );
    function drawMap() {
       var data = google.visualization.arrayToDataTable([
-        ['Lat', 'Long', 'Zuzüge'],
-          [48.037222, 14.416944,'ZuZüge: ' +zz[0]+'\n Wegzüge: ' +400],//Steyr
-          [48.1575, 14.026667,'ZuZüge: '+ zz[1]+'\n Wegzüge: ' +1120],//Wels
-          [48.2575, 13.033889, 'ZuZüge: '+zz[2]+'\n Wegzüge: ' +190],//Braunau am Inn
-          [48.316667, 14.033333, 'ZuZüge: '+zz[3] +'\n Wegzüge: ' +12],//Eferding
-          [48.511667, 14.506111,'ZuZüge: ' +zz[4]+'\n Wegzüge: ' +400],//Freistadt
-          [47.91805,13.799444,'ZuZüge: '+ zz[5]+'\n Wegzüge: ' +1120],//Gmunden
-          [48.235,13.831944, 'ZuZüge: '+zz[6]+'\n Wegzüge: ' +190],//Grieskirchen
-          [47.905,14.121944, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Kirchdorf an der Krems
-          [48.160139,14.339722, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//   Linz-Land;
-[48.250278,14.633611, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Perg;
-[48.21,13.489444 , 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Ried im Innkreis;48.21;13.489444 
-[48.573333,13.991667, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Rohrbach;48.573333;13.991667
-[48.456944,13.431667, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Schärding;48.456944;13.431667
-[47.887778,14.550278, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Steyr-Land;7.887778;14.550278
-[48.459444,14.290833, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Urfahr-Umgebung;48.459444;14.290833
-[48.008611,13.655833, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Vöcklabruck;48.008611;13.655833
-[48.078611,13.958333, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Wels-Land;48.078611;13.958333 
-[47.845556,16.518889, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Burgenland;47.845556;16.518889
-[46.617778,14.305556, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Kärnten;46.617778;14.305556
-[48.204722,15.62666 , 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Niederösterreich;48.204722;15.62666 
-[47.8,13.033333, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Salzburg;47.8;13.033333
-[48.209722,16.37, 'ZuZüge: '+zz[7] +'\n Wegzüge: ' +812],//Wien;48.209722;16.37
-          [47.066667,15.433333, 'ZuZüge: '+zz[8] +'\n Wegzüge: ' +932],//Steiermark
-          [47.267222,11.392778, 'ZuZüge: '+zz[9] +'\n Wegzüge: ' +1672],//Tirol
-          [47.505,9.749167, 'ZuZüge: '+zz[10] +'\n Wegzüge: ' +123]//Vorarlberg
+        ['Lat', 'Long', 'Zuzï¿½ge'],
+          [48.037222, 14.416944,'ZuZï¿½ge: ' +zz[0]+'\n Wegzï¿½ge: ' +400],//Steyr
+          [48.1575, 14.026667,'ZuZï¿½ge: '+ zz[1]+'\n Wegzï¿½ge: ' +1120],//Wels
+          [48.2575, 13.033889, 'ZuZï¿½ge: '+zz[2]+'\n Wegzï¿½ge: ' +190],//Braunau am Inn
+          [48.316667, 14.033333, 'ZuZï¿½ge: '+zz[3] +'\n Wegzï¿½ge: ' +12],//Eferding
+          [48.511667, 14.506111,'ZuZï¿½ge: ' +zz[4]+'\n Wegzï¿½ge: ' +400],//Freistadt
+          [47.91805,13.799444,'ZuZï¿½ge: '+ zz[5]+'\n Wegzï¿½ge: ' +1120],//Gmunden
+          [48.235,13.831944, 'ZuZï¿½ge: '+zz[6]+'\n Wegzï¿½ge: ' +190],//Grieskirchen
+          [47.905,14.121944, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Kirchdorf an der Krems
+          [48.160139,14.339722, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//   Linz-Land;
+[48.250278,14.633611, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Perg;
+[48.21,13.489444 , 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Ried im Innkreis;48.21;13.489444 
+[48.573333,13.991667, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Rohrbach;48.573333;13.991667
+[48.456944,13.431667, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Schï¿½rding;48.456944;13.431667
+[47.887778,14.550278, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Steyr-Land;7.887778;14.550278
+[48.459444,14.290833, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Urfahr-Umgebung;48.459444;14.290833
+[48.008611,13.655833, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Vï¿½cklabruck;48.008611;13.655833
+[48.078611,13.958333, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Wels-Land;48.078611;13.958333 
+[47.845556,16.518889, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Burgenland;47.845556;16.518889
+[46.617778,14.305556, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Kï¿½rnten;46.617778;14.305556
+[48.204722,15.62666 , 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Niederï¿½sterreich;48.204722;15.62666 
+[47.8,13.033333, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Salzburg;47.8;13.033333
+[48.209722,16.37, 'ZuZï¿½ge: '+zz[7] +'\n Wegzï¿½ge: ' +812],//Wien;48.209722;16.37
+          [47.066667,15.433333, 'ZuZï¿½ge: '+zz[8] +'\n Wegzï¿½ge: ' +932],//Steiermark
+          [47.267222,11.392778, 'ZuZï¿½ge: '+zz[9] +'\n Wegzï¿½ge: ' +1672],//Tirol
+          [47.505,9.749167, 'ZuZï¿½ge: '+zz[10] +'\n Wegzï¿½ge: ' +123]//Vorarlberg
        
       ]);
         
@@ -88,12 +88,14 @@ function goToNewPage()
 	<img src="Zz.png" alt="Let's move" style="width:364px;height:240px;"> 
 
 	<form action="servlet" method="post">
-	<select id = "list" accesskey="target">
-               <option value = "map.jsp" >Map</option>
-               <option value = "wzg.jsp" >Wegzüge Gesamt</option>
-               <option value = "zzg.jsp" >Zuzüge Gesamt</option>
-               <option value = "list.jsp" >Liste</option>
-             </select>
+
+        <select id = "list" accesskey="target">
+            <option value = "map.jsp" >Map</option>
+            <option value = "list.jsp" >Liste</option>
+            <option value = "zuzuege_gesamt.jsp">ZuzÃ¼ge gesamt</option>
+            <option value = "wegzuege_gesamt.jsp">WegzÃ¼ge gesamt</option>
+        </select>
+
              <input type=button value="Go" onclick="goToNewPage()" />
 	</form>
 	</font>
