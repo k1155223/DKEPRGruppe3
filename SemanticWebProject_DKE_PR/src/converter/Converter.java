@@ -54,9 +54,9 @@ public class Converter {
 
 		FileInputStream fis = new FileInputStream(this.getZuzug());
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis, "Cp1252"));
-		FileInputStream fis2 = new FileInputStream(this.getZuzug());
+		FileInputStream fis2 = new FileInputStream(this.getWegzug());
 		BufferedReader br2 = new BufferedReader(new InputStreamReader(fis2, "Cp1252"));
-		FileInputStream fis3 = new FileInputStream(this.getZuzug());
+		FileInputStream fis3 = new FileInputStream(this.getKoords());
 		BufferedReader br3 = new BufferedReader(new InputStreamReader(fis3, "Cp1252"));
 
 		//skip headings
