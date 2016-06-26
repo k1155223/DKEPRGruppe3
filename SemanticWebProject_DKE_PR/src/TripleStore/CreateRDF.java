@@ -29,15 +29,6 @@ public class CreateRDF {
     public static void create() throws Exception{
         Map<String, String[]> data = c.convert();
 
-        //Test des Joins
-//    	for(Entry<String, String[]> e : data.entrySet()){
-//    		System.out.print(e.getKey()+": ");
-//    		for(String v : e.getValue()){
-//    			System.out.print(v+", ");
-//    		}
-//    		System.out.println();
-//    	}
-
         //in RDF schreiben
         final String BASE = "http://www.dke.at/";
         BasicConfigurator.configure(new NullAppender());
@@ -51,17 +42,7 @@ public class CreateRDF {
         DatasetAccessorFactory factory = null;
         DatasetAccessor accessor = factory.createHTTP(serviceURI2);
         accessor.putModel(m);
-        System.out.println("hochgeladen");
 
-
-        //Query
-        Query query = QueryFactory.create("PREFIX rdf: <http://www.dke.at/bezirk/> SELECT ?Bezirk ?Zuzuege_M ?Zuzuege_W ?Zuzuege_I ?Zuzuege_A WHERE {   ?x rdf:hatName ?Bezirk.  ?x rdf:zuzuege_M ?Zuzuege_M.  ?x rdf:zuzuege_W ?Zuzuege_W.  ?x rdf:zuzuege_I ?Zuzuege_I.  ?x rdf:zuzuege_A ?Zuzuege_A.}");
-        QueryExecution q = QueryExecutionFactory.sparqlService(serviceURI,query);
-        ResultSet results = q.execSelect(); // get result-set
-
-        ResultSetFormatter.out(System.out, results); // print results
-
-        System.out.println(ResultSetFormatter.asXMLString(results));
     }
 
     private static void writeFile(OntModel m) throws IOException {
