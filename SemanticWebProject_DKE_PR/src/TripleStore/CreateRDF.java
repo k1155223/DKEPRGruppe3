@@ -29,7 +29,7 @@ public class CreateRDF {
 
     public static void create() throws Exception{
         Map<String, String[]> data = c.convert();
-        
+
         //in RDF schreiben
         final String BASE = "http://www.dke.at/";
         BasicConfigurator.configure(new NullAppender());
