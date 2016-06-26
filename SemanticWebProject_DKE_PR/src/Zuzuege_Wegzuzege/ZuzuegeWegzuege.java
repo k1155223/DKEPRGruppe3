@@ -31,8 +31,8 @@ public class ZuzuegeWegzuege {
                     "?x rdf:wegzuege_I ?Wegzuege_I." +
                     "?x rdf:wegzuege_A ?Wegzuege_A." +
                     "?x rdf:hatLocation ?y." +
-                    "?y rdf2:hatLaengengrad ?BG." +
-                    "?y rdf2:hatBreitengrad ?LG. }");
+                    "?y rdf2:hatBreitengrad ?BG." +
+                    "?y rdf2:hatLaengengrad ?LG. }");
 
 
     public ZuzuegeWegzuege() {

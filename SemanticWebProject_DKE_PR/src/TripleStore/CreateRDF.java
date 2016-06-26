@@ -25,18 +25,19 @@ public class CreateRDF {
     private static String serviceURI =  "http://localhost:3030/ds/query";
 
     static Converter c = new Converter(new File("DKE/zuzug_2014.csv"), new File("DKE/wegzug_2014.csv"), new File("DKE/koordinaten.csv"));
+    //static Converter c = new Converter(new File("src/converter/zuzug_2014.csv"), new File("src/converter/wegzug_2014.csv"), new File("src/converter/koordinaten.csv"));
 
     public static void create() throws Exception{
         Map<String, String[]> data = c.convert();
 
         //Test des Joins
-//    	for(Entry<String, String[]> e : data.entrySet()){
-//    		System.out.print(e.getKey()+": ");
-//    		for(String v : e.getValue()){
-//    			System.out.print(v+", ");
-//    		}
-//    		System.out.println();
-//    	}
+    	/*for(Entry<String, String[]> e : data.entrySet()){
+    		System.out.print(e.getKey()+": ");
+    		for(String v : e.getValue()){
+    			System.out.print(v+", ");
+    		}
+    		System.out.println();
+    	}*/
 
         //in RDF schreiben
         final String BASE = "http://www.dke.at/";
