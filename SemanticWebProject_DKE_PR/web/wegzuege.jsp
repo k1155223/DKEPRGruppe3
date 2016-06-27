@@ -123,10 +123,9 @@
 
         <form action="servlet" method="post">
             <select id = "list" accesskey="target">
-                <option value = "map.jsp" >&Uuml;bersichtskarte</option>
                 <option value = "list.jsp" >&Uuml;bersichtsliste</option>
-                <option value = "zuzuege.jsp">Zuz&uuml;ge</option>
-                <option value = "wegzuege.jsp">Wegzuege</option>
+                <option value = "zuzuege.jsp">Zuz&uuml;ge nach Linz</option>
+                <option value = "wegzuege.jsp">Wegz&uuml;ge von Linz</option>
                 <option value = "relation_zuzuege_wegzuege.jsp">Relation zwischen Wegz&uuml;ge und Zuz&uuml;ge</option>
             </select>
             <input type=button value="Go" onclick="goToNewPage()" />

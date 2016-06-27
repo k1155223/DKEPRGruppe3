@@ -81,5 +81,5 @@ public class zuzug_wegzug_eintrag{
     }
 
 
-} // end class zuzug_eintrag
+} // end class zuzug_wegzug_eintrag
 

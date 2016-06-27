@@ -7,7 +7,23 @@ import java.util.ArrayList;
 public class ZuzuegeWegzuege {
 
     private static String serviceURI =  "http://localhost:3030/ds/query";
-    ArrayList<QuerySolution> rl; // resultlist
+
+    /*
+        Die SPARQL-Query wird mit dem Konstruktor aufgerufen.
+        Daher muss in jeder .JSP-Seite, in der die Abfrage_Ergebnisse ausgelesen werden sollen, mittels new ZuzuegeWegzuege eine neu Instanz dieser Klasse erzeugt werden.
+        ArrayList<QuerySolution> rl = resultlist in welcher wir die einzelnen Zeilen des Query-Ergebnises speichern.
+        Das Ergebnis der Query wird zunächst als ResulSet-Objekt gespeichert (nicht zu verwechseln mit dem Java-JDBC ResultSet).
+        Durch den Befehl  rl = (ArrayList<QuerySolution>) ResultSetFormatter.toList(results); speichern wir das ResultSet als Liste.
+        Diese  Liste besteht aus Objekten des Datentyps QuerySolution.
+        In QuerySolution-Objekten sind die einzelne Werte (Längengrad, Zuzüge Männer, Wegzüge Frauen usw.) als Objekte des Typs RDFNode abgespeichert.
+        Aus dem Datentyp RDFNode lässt sich die Methode toString anwenden, damit ist der Wert als String verfügbar.
+        RDFNodes, welche Koordinaten beinhalten, werden weiters mittels, hier anhand des Breitegrades, des Befehls Double.parseDouble(rl.get(i).get("BG").toString()); als Double gespeichert.
+        Für die Zuzugs- und Wegzugs-Werte werden die RDFNodes zu Integer-Werten umgewandelt.
+        Damit sind alle Werte dann fertig für die Übergabe an den zuzug_wegzug_Konstruktor.
+        In einem zuzug_wegzug_eintrags-Objekt sind alle Daten eines Bezirks/Bundeslandes gespeichert (Bezriks-Name bzw. Bundeslandes-Name, Zuzugs- und Wegzugs-Werte und Koordinaten).
+        Auf all diese zuzuege_wegzuege_eintrags-Objekte lässt sich mittels  getZuzuegeWegzuege() zugreifen, welche die ArrayList mit eben jenen Einträgen zurückgibt.
+    */
+    ArrayList<QuerySolution> rl;
     ArrayList<zuzug_wegzug_eintrag> zuzuege_wegzuege = new ArrayList<>();
 
     String bezirk;
@@ -19,7 +35,7 @@ public class ZuzuegeWegzuege {
             "PREFIX rdf: <http://www.dke.at/bezirk/>" +
                     "PREFIX rdf2: <http://www.dke.at/location/>" +
 
-                    "SELECT ?Bezirk ?Zuzuege_M ?Zuzuege_W ?Zuzuege_I ?Zuzuege_A ?Wegzuege_M ?Wegzuege_W ?Wegzuege_I ?Wegzuege_A ?LG ?BG " +
+                    "SELECT ?Bezirk ?Zuzuege_M ?Zuzuege_W ?Zuzuege_I ?Zuzuege_A ?Wegzuege_M ?Wegzuege_W ?Wegzuege_I ?Wegzuege_A ?BG ?LG " +
                     "WHERE {" +
                     "?x rdf:hatName ?Bezirk." +
                     "?x rdf:zuzuege_M ?Zuzuege_M." +
@@ -42,6 +58,10 @@ public class ZuzuegeWegzuege {
 
         for (int i = 0; i < rl.size(); i++) {
 
+            /* Die Varialen in der QuerySolution-Objekte sind vom Datentyp RDFNode und werden zunächst als String umgewandelt.
+               Danach lassen sie sich in das gewünschte Format (Int, Double) konvertieren, bis auf die Variable Bezirk, welche
+               bereits als String sich im gewünschten Format befindet.
+             */
             bezirk = rl.get(i).get("Bezirk").toString();
             zuzug_maenner = Integer.parseInt(rl.get(i).get("Zuzuege_M").toString());
             zuzug_frauen = Integer.parseInt(rl.get(i).get("Zuzuege_W").toString());
@@ -68,7 +88,7 @@ public class ZuzuegeWegzuege {
 
         } // end for loop
 
-    } // end constructor Zuzuege
+    } // end constructor ZuzuegeWegzuege
 
     public ArrayList<zuzug_wegzug_eintrag> getZuzuegeWegzuege() {
         return zuzuege_wegzuege;

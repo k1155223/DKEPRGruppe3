@@ -21,16 +21,5 @@ public class TestConnection {
 
         }
 
-        /*
-        try {
-            CreateRDF.create();
-            CreateRDF c = new CreateRDF();
-            c.testPath();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        */
     }
 }
