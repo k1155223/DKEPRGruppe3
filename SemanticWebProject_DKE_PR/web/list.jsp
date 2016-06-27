@@ -13,7 +13,7 @@
   <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
   <script type='text/javascript'>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-              <title>Our Semantic App</title>
+              <title>&Uuml;bersichtsliste</title>
       <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
     <script type='text/javascript'>
@@ -38,7 +38,10 @@
             bezirk = "<%=zzwz.get(i).getBezirk()%>";
             wegzuege_gesamt = <%=zzwz.get(i).getWegzug_frauen()+zzwz.get(i).getWegzug_maenner()%>;
             zuzuege_gesamt = <%=zzwz.get(i).getZuzug_maenner()+zzwz.get(i).getZuzug_frauen()%>;
-            data.addRows([ [bezirk,  {v: wegzuege_gesamt, f: String(wegzuege_gesamt)},{v: zuzuege_gesamt, f:  String(zuzuege_gesamt)}] ] );
+            zuzug_inlaender = <%=zzwz.get(i).getZuzug_inlaender()%>;
+            zuzug_auslaender = <%=zzwz.get(i).getZuzug_auslaender()%>;
+
+            data.addRows([ [bezirk,  {v: wegzuege_gesamt, f: String(wegzuege_gesamt)},{v: zuzuege_gesamt, f:  String(zuzuege_gesamt)},{v: zuzug_inlaender, f:  String(zuzug_inlaender)}, {v: zuzug_auslaender, f:  String(zuzug_auslaender)}] ] );
             <%
               }
             %>
@@ -57,19 +60,17 @@
 
 <body>
 <center>
-    <font face="verdana">
-        <h2>Let's move!</h2>
-        <img src="Zz.png" alt="Let's move" style="width:364px;height:240px;">
-        <ul>
-            <li><a href="map.jsp" >Map</a></li>
-            <li><a href="list.jsp" >Liste</a></li>
-            <li><a href="zuzuege_gesamt.jsp">Zuzüge gesamt</a></li>
-            <li><a href="wegzuege_gesamt.jsp">Wegzüge gesamt</a></li>
-            <li><a href="relation_zuzuege_wegzuege.jsp">Relation Wegzüge zu Zuzüge</a></li>
-        </ul>
-    </font>
 
-
+    <form action="servlet" method="post">
+        <select id = "list" accesskey="target">
+            <option value = "map.jsp" >&Uuml;bersichtskarte</option>
+            <option value = "list.jsp" >&Uuml;bersichtsliste</option>
+            <option value = "zuzuege.jsp">Zuz&uuml;ge</option>
+            <option value = "wegzuege.jsp">Wegzuege</option>
+            <option value = "relation_zuzuege_wegzuege.jsp">Relation zwischen Wegz&uuml;ge und Zuz&uuml;ge</option>
+        </select>
+        <input type=button value="Go" onclick="goToNewPage()" />
+    </form>
 
     <div id="table_div"></div>
 

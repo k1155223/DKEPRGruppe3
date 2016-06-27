@@ -13,7 +13,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 
 
-<title>Our Semantic App</title>
+<title>&Uuml;bersichtskarte</title>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
   <script async defer
@@ -85,20 +85,18 @@ function goToNewPage()
 <center>
 	<font face="verdana">
 		<h2>Let's move!</h2>
-	<img src="Zz.png" alt="Let's move" style="width:364px;height:240px;"> 
+	<img src="Zz.png" alt="Let's move" style="width:364px;height:240px;">
 
-	<form action="servlet" method="post">
-
-        <select id = "list" accesskey="target">
-            <option value = "map.jsp" >Map</option>
-            <option value = "list.jsp" >Liste</option>
-            <option value = "zuzuege_gesamt.jsp">Zuzüge gesamt</option>
-            <option value = "wegzuege_gesamt.jsp">Wegzüge gesamt</option>
-        </select>
-
-             <input type=button value="Go" onclick="goToNewPage()" />
-	</form>
-	</font>
+        <form action="servlet" method="post">
+            <select id = "list" accesskey="target">
+                <option value = "map.jsp" >&Uuml;bersichtskarte</option>
+                <option value = "list.jsp" >&Uuml;bersichtsliste</option>
+                <option value = "zuzuege.jsp">Zuz&uuml;ge</option>
+                <option value = "wegzuege.jsp">Wegzuege</option>
+                <option value = "relation_zuzuege_wegzuege.jsp">Relation zwischen Wegz&uuml;ge und Zuz&uuml;ge</option>
+            </select>
+            <input type=button value="Go" onclick="goToNewPage()" />
+        </form>
 	 <div id='map_canvas'></div>
 	 
 	 
