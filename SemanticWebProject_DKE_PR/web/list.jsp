@@ -8,9 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Our Semantic App</title>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <title>&Uuml;bersichtsliste</title>
+    <link rel="stylesheet" type="text/css" href="format.css">
   <script type='text/javascript'>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
               <title>&Uuml;bersichtsliste</title>
@@ -28,13 +27,13 @@
             data.addColumn('number', 'Zuzüge Gesamt');
             data.addColumn('number', 'Zuzüge Männer');
             data.addColumn('number', 'Zuzüge Frauen');
-            data.addColumn('number', 'Zuzüge Inländer');
-            data.addColumn('number', 'Zuzüge Ausländer');
+            data.addColumn('number', 'Zuzüge InländerInnen');
+            data.addColumn('number', 'Zuzüge AusländerInnen');
             data.addColumn('number', 'Wegzüge Gesamt');
             data.addColumn('number', 'Wegzüge Männer');
             data.addColumn('number', 'Wegzüge Frauen');
-            data.addColumn('number', 'Wegzüge Inländer');
-            data.addColumn('number', 'Wegzüge Ausländer');
+            data.addColumn('number', 'Wegzüge InländerInnen');
+            data.addColumn('number', 'Wegzüge AusländerInnen');
 
 
             var bezirk;
@@ -93,32 +92,29 @@
 </head>
 
 <body>
-<center>
-    <h2>Let's move!</h2>
+    <center>
+    <h1>Let's move!</h1>
     <img src="Zz.png" alt="Let's move" style="width:364px;height:240px;">
 
     <form action="servlet" method="post">
         <select id = "list" accesskey="target">
-            <option value = "list.jsp" >&Uuml;bersichtsliste</option>
+            <option value = "list.jsp" selected>&Uuml;bersichtsliste</option>
             <option value = "zuzuege.jsp">Zuz&uuml;ge nach Linz</option>
             <option value = "wegzuege.jsp">Wegz&uuml;ge von Linz</option>
             <option value = "relation_zuzuege_wegzuege.jsp">Relation zwischen Wegz&uuml;ge und Zuz&uuml;ge</option>
         </select>
         <input type=button value="Go" onclick="goToNewPage()" />
     </form>
-
+        <div class="description">
     <p>
         &Uuml;bersichtsliste über alle Zuzüge nach Linz und Wegzüge von Linz gelistet nach Bezirken und Bundesländern. Mit einem Linksclick auf eine Spaltenüberschrift wird die Tabelle sortiert anhand des ausgew&auml;hlten Werts.
         <br /> Info: Zuz&uuml;ge gesamt = Zu&uuml;ge M&auml;nner + Zu&uuml;ge Frauen = Zu&uuml;ge Inl&auml;nder + Zu&uuml;ge Aus&auml;nder
         <br /> Zuz&uuml;ge  Wegz&uuml;ge gesamt = Weg&uuml;ge M&auml;nner + Weg&uuml;ge Frauen = Weg&uuml;ge Inl&auml;nder + Weg&uuml;ge Aus&auml;nder
     </p>
-
-    <hr />
+    </div>
+        <hr />
     <div id="table_div"></div>
-
-</center>
-
-
+    </center>
 </body>
 
 </html>

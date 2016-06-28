@@ -1,4 +1,19 @@
  body {
 	background-color: mintcream;
 	font-family: "Verdana", Verdana, sans-serif;
+	 text-align: center;
+	 align-content: center;
 }
+
+ .radio_button_field{
+	 font-size: 20pt;
+ }
+
+ hr{
+	 width: 90%;
+	 background-color:#1a202f;
+ }
+
+ .description{
+	 width:50%;
+ }

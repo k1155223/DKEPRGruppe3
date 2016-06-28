@@ -1,4 +1,4 @@
-<%@ page import="org.apache.jena.query.*"
+<%@ page
          import="java.lang.String"
          import="Zuzuege_Wegzuzege.*"
          import="TripleStore.*"
@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" type="text/css" href="format.css">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
     <title>Zuz&uuml;ge</title>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -66,9 +67,9 @@
                 zuzuege = <%=zzwz.get(i).getZuzug_maenner()%>;
             }else if(abfrage_kategorie == 'Frauen'){
                 zuzuege = <%=zzwz.get(i).getZuzug_frauen()%>;
-            }else if(abfrage_kategorie == 'Inländer') {
+            }else if(abfrage_kategorie == 'InländerInnen') {
                 zuzuege = <%=zzwz.get(i).getZuzug_inlaender()%>;
-            }else if(abfrage_kategorie == 'Ausländer') {
+            }else if(abfrage_kategorie == 'AusländerInnen') {
                 zuzuege = <%=zzwz.get(i).getZuzug_auslaender()%>;
             } /* end if-else */
 
@@ -121,13 +122,13 @@
 
 <body >
 <center>
-    <h2>Let's move!</h2>
+    <h1>Let's move!</h1>
     <img src="Zz.png" alt="Let's move" style="width:364px;height:240px;">
 
     <form action="servlet" method="post">
         <select id = "list" accesskey="target">
             <option value = "list.jsp" >&Uuml;bersichtsliste</option>
-            <option value = "zuzuege.jsp">Zuz&uuml;ge nach Linz</option>
+            <option value = "zuzuege.jsp" selected>Zuz&uuml;ge nach Linz</option>
             <option value = "wegzuege.jsp">Wegz&uuml;ge von Linz</option>
             <option value = "relation_zuzuege_wegzuege.jsp">Relation zwischen Wegz&uuml;ge und Zuz&uuml;ge</option>
         </select>
@@ -136,16 +137,15 @@
 
     <h2>Wie viele Menschen sind von anderen Gebieten nach Linz zugezogen? Diese Grafik verr&auml;t es dir!</h2>
 
-    <div style="font-size: 20pt;">
+    <div class="radio_button_field">
         <input type="radio" name="abfrage" checked="checked" onclick="reloadMap('gesamt');" >Gesamt
         <input type="radio" name="abfrage" onclick="reloadMap('Frauen');">Frauen
         <input type="radio" name="abfrage" onclick="reloadMap('Männer');">M&auml;nner
-        <input type="radio" name="abfrage" onclick="reloadMap('Inländer');">Inl&auml;nder
-        <input type="radio" name="abfrage" onclick="reloadMap('Ausländer');">Ausl&auml;nder
+        <input type="radio" name="abfrage" onclick="reloadMap('InländerInnen');">Inl&auml;nderInnen
+        <input type="radio" name="abfrage" onclick="reloadMap('AusländerInnen');">Ausl&auml;nderInnen
     </div>
-
+    <hr />
     <div id="visualization"> <!-- Dieser Bereich stellt die Karte dar -->
-
 </center>
 </body>
 </html>

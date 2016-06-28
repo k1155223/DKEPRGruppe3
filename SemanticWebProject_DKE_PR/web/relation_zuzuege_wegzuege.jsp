@@ -88,14 +88,14 @@
                         wz_abzueglich_zz = wegzuege - zuzuege;
                     %>
                     relation_wegzuege_zuzuege = <%=wz_abzueglich_zz %>;
-                }else if(abfrage_kategorie == 'Inländer') {
+                }else if(abfrage_kategorie == 'InländerInnen') {
                     <%
                        zuzuege = zzwz.get(i).getZuzug_inlaender();
                        wegzuege = zzwz.get(i).getWegzug_inlaender();
                        wz_abzueglich_zz = wegzuege - zuzuege;
                     %>
                     relation_wegzuege_zuzuege = <%=wz_abzueglich_zz %>;
-                }else if(abfrage_kategorie == 'Ausländer') {
+                }else if(abfrage_kategorie == 'AusländerInnen') {
                     <%
                        zuzuege = zzwz.get(i).getZuzug_auslaender();
                        wegzuege = zzwz.get(i).getWegzug_auslaender();
@@ -148,10 +148,10 @@
     </script>
 
 </head>
-
+<link rel="stylesheet" type="text/css" href="format.css">
 <body>
 <center>
-<h2>Let's move!</h2>
+<h1>Let's move!</h1>
 <img src="Zz.png" alt="Let's move" style="width:364px;height:240px;">
 
 <form action="servlet" method="post">
@@ -159,26 +159,23 @@
         <option value = "list.jsp" >&Uuml;bersichtsliste</option>
         <option value = "zuzuege.jsp">Zuz&uuml;ge nach Linz</option>
         <option value = "wegzuege.jsp">Wegz&uuml;ge von Linz</option>
-        <option value = "relation_zuzuege_wegzuege.jsp">Relation zwischen Wegz&uuml;ge und Zuz&uuml;ge</option>
+        <option value = "relation_zuzuege_wegzuege.jsp" selected>Relation zwischen Wegz&uuml;ge und Zuz&uuml;ge</option>
     </select>
     <input type=button value="Go" onclick="goToNewPage()" />
 </form>
 
     <h2>Diese Grafik zeigt die bereinigte Zuwanderung von Linz aus an. Hierbei werden die Zuzüge nach Linz von den Wegzügen von Linz abgezogen. </h2>
 
-    <div style="font-size: 20pt;">
+    <div class="radio_button_field">
         <input type="radio" name="abfrage" checked="checked" onclick="reloadMap('gesamt');" >Gesamt
         <input type="radio" name="abfrage" onclick="reloadMap('Frauen');">Frauen
         <input type="radio" name="abfrage" onclick="reloadMap('Männer');">M&auml;nner
-        <input type="radio" name="abfrage" onclick="reloadMap('Inländer');">Inl&auml;nder
-        <input type="radio" name="abfrage" onclick="reloadMap('Ausländer');">Ausl&auml;nder
+        <input type="radio" name="abfrage" onclick="reloadMap('InländerInnen');">Inl&auml;nderInnen
+        <input type="radio" name="abfrage" onclick="reloadMap('AusländerInnen');">Ausl&auml;nderInnen
     </div>
-
+<hr />
     <div id="visualization"> <!-- Dieser Bereich stellt die Karte dar -->
-
 </center>
-
-
 </body>
 
 </html>
